@@ -15,6 +15,12 @@ pub struct RepeatingSequenceWallHolder {
 }
 impl RepeatingSequenceWallHolder {
 	pub fn new(sequence: Vec<i128>, modulo: i128, top: usize, bottom: usize, left: usize, right: usize) -> Self {
+		if right < left {
+			panic!("Right edge of view area cannot be lower than the left edge");
+		};
+		if bottom < top {
+			panic!("Bottom edge of view area cannot be above the top edge");
+		};
 		Self {
 			wall: RepeatingSequenceWall::new(sequence, modulo),
 
