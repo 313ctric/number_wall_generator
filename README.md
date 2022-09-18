@@ -34,3 +34,7 @@ Only the last line is available as once a line is no longer needed for future ca
 The program is fairly fragile, most input errors are handled by `panic!`.
 
 You may get errors using strange left values for the left const wall, as they could potentially create invalid walls (maybe?), however I haven't tested this.
+
+## ToDo
+
+Add a `WallHolder` trait including the `calculate_next_line`, `get_last_line`, `get_line_count` and `get_line_memory` functions to reduce code reuse for programs using multiple types of wall.
