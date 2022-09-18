@@ -30,7 +30,7 @@ fn pagoda(n:usize) -> i128 {
 	};
 
 	(( rook(n+1) - rook_n_minus_1 ).rem_euclid(3) ) as i128
-	}
+}
 
 fn rueppel(n:usize) -> i128 {
 	if (n+1).is_power_of_two() {
